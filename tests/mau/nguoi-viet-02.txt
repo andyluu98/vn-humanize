@@ -1,0 +1,13 @@
+Gửi cả nhóm,
+
+Họp sáng nay chốt mấy việc như sau, ai thấy sai thì nhắn lại trong hôm nay nhé.
+
+Bản demo cho bên khách dời sang thứ Năm tuần sau, vì bên họ đổi người phụ trách. Long lo phần dựng lại dữ liệu mẫu, nhớ bỏ hết số điện thoại thật đi, lần trước suýt lộ. Trang báo cáo vẫn còn lỗi lệch cột khi xuất PDF. Hà xem giúp, nếu tới thứ Ba chưa sửa được thì mình tạm bỏ nút xuất PDF trong bản demo, không sao.
+
+Về ước lượng: anh Quân nghĩ phần phân quyền mất tầm 5 ngày, em thì nghĩ phải 8. Chưa ai thuyết phục được ai nên tạm ghi 8, làm xong tính lại.
+
+Còn vụ thuê thêm người thì chưa có gì mới. Chị Mai nói cuối tháng mới có ngân sách.
+
+Cuối tuần ai rảnh thì đọc trước tài liệu API của bên khách. Hơi dài, nhưng đọc trước thì đỡ phải hỏi lại.
+
+Thanh

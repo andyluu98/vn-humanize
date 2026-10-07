@@ -2,9 +2,11 @@
 
 Mỗi mẫu gồm: **Dấu hiệu** (cụm từ, cấu trúc cần để ý), **Vì sao** (vì sao nghe như máy), **Trước** và **Sau** (ví dụ sửa).
 
-Mẫu xếp từ mạnh tới yếu. Mẫu 1 tới 6 thấy một lần là sửa. Mẫu ghi *(yếu)* chỉ sửa khi đoạn văn có thêm dấu vết khác, vì người viết thật cũng hay dùng.
+Danh mục có 51 mẫu: 43 mẫu chung (số 1 tới 43) và 8 mẫu riêng của tiếng Việt (V1 tới V8). Mẫu xếp theo nhóm; số thứ tự không nói lên độ mạnh, mẫu thêm sau lấy số tiếp theo và đặt vào nhóm hợp nghĩa. Mẫu 1 tới 6 và 28 tới 30 thấy một lần là sửa. Mẫu ghi *(yếu)* chỉ sửa khi đoạn văn có thêm dấu vết khác, vì người viết thật cũng hay dùng. Các mẫu còn lại sửa khi lặp lại hoặc đi cùng dấu vết khác.
 
-Nhóm A tới F dựa trên blader/humanizer (bản 3.1.0) và trang "Signs of AI writing" của Wikipedia. Nhóm V là các mẫu riêng của tiếng Việt.
+Mục tiêu là văn đọc lên như chính người viết, không phải qua mặt máy dò. Danh mục không có mẹo cố ý gõ sai, cố ý lệch giọng, chèn ký tự ẩn, đổi từ đồng nghĩa hàng loạt hay dịch qua dịch lại.
+
+Nguồn ý tưởng: blader/humanizer (giấy phép MIT, bản 3.1.0); petergyang/no-ai-slop qua bản chuyển thể ryanmaule/humanize (MIT); shir-danishyar/humanize (MIT); korECM/humanize; David-Saeteros/claude-skills (chỉ lấy ý tưởng); trang "Signs of AI writing" của Wikipedia. Cách diễn đạt và ví dụ trong file này viết lại bằng tiếng Việt, không dịch nguyên văn. Nhóm V là các mẫu riêng của tiếng Việt.
 
 ---
 
@@ -31,7 +33,7 @@ Nhóm A tới F dựa trên blader/humanizer (bản 3.1.0) và trang "Signs of A
 ### 3. Câu nghe sâu sắc kiểu châm ngôn
 
 **Dấu hiệu:** suy cho cùng; xét cho cùng; về bản chất; điều thực sự quan trọng là; cốt lõi của vấn đề; X chính là Y của Z ("dữ liệu là dầu mỏ mới"); X không phải công cụ mà là tấm gương.
-**Vì sao:** Một ý bình thường được khoác áo chân lý. Thay câu ví von bằng điều cụ thể.
+**Vì sao:** Một ý bình thường được khoác áo chân lý. Thay câu ví von bằng điều cụ thể. Nếu câu nghe sâu sắc nằm cuối đoạn để chốt lại, thường nên xóa hẳn, không viết lại thành một hình ảnh ví von hay hơn: ví von mới vẫn là câu chốt, chỉ đổi áo.
 **Trước:**
 > Suy cho cùng, dữ liệu chính là mạch máu của doanh nghiệp hiện đại.
 **Sau:**
@@ -64,6 +66,15 @@ Nhóm A tới F dựa trên blader/humanizer (bản 3.1.0) và trang "Signs of A
 **Sau:**
 > Tháng trước, phòng tôi bắt đầu dùng AI để trả lời email khách hàng.
 
+### 38. Mở bài bằng định nghĩa chủ đề hoặc nhắc lại đề bài
+
+**Dấu hiệu:** "AI là viết tắt của Artificial Intelligence, tức trí tuệ nhân tạo..."; "Chuyển đổi số là quá trình..."; "Theo yêu cầu của đề bài, bài viết sẽ trình bày..."; "Để trả lời câu hỏi này, trước hết cần hiểu X là gì".
+**Vì sao:** Người đọc đã biết chủ đề, giáo viên đã biết đề bài. Câu định nghĩa chiếm mất chỗ của ý đầu tiên. Vào thẳng ý đầu tiên; chỉ định nghĩa khi thuật ngữ thật sự mới với người đọc, hoặc khi bài cần dùng thuật ngữ theo một nghĩa hẹp riêng.
+**Trước:**
+> Trí tuệ nhân tạo là lĩnh vực khoa học máy tính giúp máy móc mô phỏng trí thông minh của con người. Theo yêu cầu của đề bài, em xin trình bày về việc dùng AI trong lớp học của em.
+**Sau:**
+> Lớp em dùng AI vào hai việc: luyện nói tiếng Anh và soát lỗi chính tả bài văn.
+
 ---
 
 ## B. Nhịp văn theo công thức
@@ -88,8 +99,8 @@ Nhóm A tới F dựa trên blader/humanizer (bản 3.1.0) và trang "Signs of A
 
 ### 9. Từ nối đầu đoạn đều đặn
 
-**Dấu hiệu:** mỗi đoạn mở bằng một từ nối: Ngoài ra, Bên cạnh đó, Hơn nữa, Đặc biệt, Đồng thời, Không những thế; liệt kê "Thứ nhất,... Thứ hai,... Thứ ba,... Cuối cùng,..." trong văn xuôi.
-**Vì sao:** Người viết thật nối ý bằng nội dung, ít khi cần từ nối ở mọi đoạn. Bỏ bớt từ nối; giữ khi quan hệ giữa hai ý cần nói rõ (nguyên nhân, đối lập). *(yếu)*
+**Dấu hiệu:** mỗi đoạn mở bằng một từ nối: Ngoài ra, Bên cạnh đó, Hơn nữa, Đặc biệt, Đồng thời, Không những thế; "Một nghiên cứu khác cho thấy" nối các ý chỉ bằng cách xếp hàng; liệt kê "Thứ nhất,... Thứ hai,... Thứ ba,... Cuối cùng,..." trong văn xuôi.
+**Vì sao:** Người viết thật nối ý bằng nội dung, ít khi cần từ nối ở mọi đoạn. Bỏ bớt từ nối. Khi cần nối, để từ nối mang quan hệ logic giữa hai ý: nguyên nhân ("vì vậy", "do đó"), đối lập ("nhưng", "ngược lại"), điều kiện ("nếu", "khi đó"). Từ nối kiểu "Bên cạnh đó", "Một nghiên cứu khác cho thấy" chỉ báo là có thêm ý, không nói hai ý liên quan thế nào. Mức tham khảo: chừng hai từ nối đầu câu trong một đoạn khoảng 300 chữ là bình thường. *(yếu)*
 **Trước:**
 > Bên cạnh đó, AI còn giúp tiết kiệm thời gian. Ngoài ra, AI cũng giảm sai sót. Hơn nữa, AI có thể làm việc 24/7.
 **Sau:**
@@ -97,7 +108,7 @@ Nhóm A tới F dựa trên blader/humanizer (bản 3.1.0) và trang "Signs of A
 
 ### 10. Gạch dài làm dấu nối vạn năng
 
-**Quy tắc:** Bản cuối không có gạch dài (U+2014) hay gạch vừa (U+2013), trừ khi văn mẫu của người viết có dùng; khi đó giữ đúng tỷ lệ của văn mẫu. Thay bằng dấu chấm, phẩy, hai chấm, ngoặc đơn, hoặc viết lại câu. Không đụng gạch trong code, lệnh, đường dẫn, URL, khoảng số ("2020-2025").
+**Quy tắc:** Bản cuối không có gạch dài (U+2014) hay gạch vừa (U+2013), trừ khi văn mẫu của người viết có dùng; khi đó đếm số gạch trên mỗi nghìn chữ của văn mẫu và giữ đúng mức đó. Thay gạch bằng dấu phẩy, dấu chấm, ngoặc đơn, hoặc viết lại câu. Cẩn thận với hai chấm: đổi gạch dài thành hai chấm rất dễ sinh ra mẫu 28 (hai chấm lật bài), nên chỉ dùng hai chấm khi vế sau thật sự là liệt kê, dẫn lời hoặc giải thích. Không đụng gạch trong code, lệnh, đường dẫn, URL, khoảng số ("2020-2025").
 **Vì sao:** Gạch dài cho phép bỏ qua việc chọn quan hệ giữa hai vế. Tiếng Việt thông thường ít dùng gạch dài, nên dấu này lộ hơn trong tiếng Anh.
 **Trước:**
 > Chính sách mới (gạch dài) được ban hành đột ngột (gạch dài) ảnh hưởng tới hàng nghìn lao động.
@@ -107,11 +118,11 @@ Nhóm A tới F dựa trên blader/humanizer (bản 3.1.0) và trang "Signs of A
 ### 11. Rào đón chồng chất
 
 **Dấu hiệu:** có thể phần nào; dường như có vẻ; ở một mức độ nào đó có lẽ; có khả năng có thể.
-**Vì sao:** Nhiều lớp rào làm mọi ý nghe không chắc. Giữ đúng một mức rào khi nguồn có căn cứ. *(yếu)*
+**Vì sao:** Nhiều lớp rào làm mọi ý nghe không chắc. Giữ đúng một mức rào khi nguồn có căn cứ. Bỏ rào không được làm nhận định mạnh hơn nguồn: không biến "có liên quan" thành "gây ra", không biến tương quan thành nhân quả, không biến "có thể" thành "chắc chắn". *(yếu)*
 **Trước:**
-> Kết quả này có thể phần nào cho thấy dường như AI có khả năng giúp ích ở một mức độ nhất định.
+> Kết quả khảo sát có thể phần nào cho thấy dường như AI có khả năng giúp rút ngắn thời gian soạn báo cáo ở một mức độ nhất định.
 **Sau:**
-> Kết quả này cho thấy AI giúp rút ngắn thời gian soạn báo cáo.
+> Kết quả khảo sát cho thấy AI có thể giúp rút ngắn thời gian soạn báo cáo.
 
 ### 12. Bị động thừa, thiếu chủ ngữ
 
@@ -121,6 +132,42 @@ Nhóm A tới F dựa trên blader/humanizer (bản 3.1.0) và trang "Signs of A
 > Khảo sát đã được tiến hành và các kết quả đã được ghi nhận.
 **Sau:**
 > Nhóm tôi khảo sát 30 nhân viên và ghi lại câu trả lời.
+
+### 32. Đổi từ đồng nghĩa liên tục
+
+**Dấu hiệu:** cùng một thứ được gọi lần lượt là "công cụ", "trợ lý", "giải pháp", "nền tảng", "hệ thống" trong vài câu liền; "khách hàng" lúc thành "người dùng", lúc thành "đối tác".
+**Vì sao:** Đổi tên liên tục để tránh lặp từ khiến người đọc phải đoán đây là một thứ hay nhiều thứ. Quy tắc: từ đúng thì lặp lại; chỉ đổi khi nghĩa thật sự khác. Hướng sửa ở đây là bớt thay từ, ngược với mẹo thay từ đồng nghĩa hàng loạt.
+**Trước:**
+> Công cụ này giúp soạn email. Trợ lý còn tóm tắt được cuộc họp. Bên cạnh đó, giải pháp cho phép xuất báo cáo, và nền tảng hỗ trợ cả tiếng Việt.
+**Sau:**
+> Công cụ này soạn email, tóm tắt cuộc họp, xuất báo cáo và dùng được với tiếng Việt.
+
+### 33. Câu "cần/nên" ở cuối mọi đoạn
+
+**Dấu hiệu:** đoạn nào cũng kết bằng một lời khuyên: "Vì vậy, doanh nghiệp cần...", "Người dùng nên...", "Chúng ta cần chủ động...", "Hãy luôn ghi nhớ rằng...".
+**Vì sao:** Lời khuyên đều đặn biến bài thành bài giảng, và thường không thêm gì so với đoạn vừa viết. Giữ lời khuyên ở chỗ người đọc thật sự phải làm gì đó, và nói cụ thể làm gì; bỏ ở các đoạn còn lại. Không tự nghĩ ra biện pháp mà người viết không nêu.
+**Trước:**
+> Nhiều nhân viên dán dữ liệu khách hàng vào chatbot công cộng. Vì vậy, doanh nghiệp cần nâng cao nhận thức về bảo mật thông tin.
+**Sau:**
+> Nhiều nhân viên dán dữ liệu khách hàng vào chatbot công cộng.
+
+### 35. Câu gói ý lặp
+
+**Dấu hiệu:** "Điều này có nghĩa là"; "Nói cách khác"; "Hay nói một cách đơn giản"; "tức là" xuất hiện nhiều lần, mỗi lần nói lại câu trước bằng lời khác.
+**Vì sao:** Một ý được nói hai lần, lần sau thường không rõ hơn lần đầu. Giữ cách nói rõ hơn, bỏ cách kia. Chỉ giữ "tức là" khi vế sau thật sự giải nghĩa một từ người đọc chưa biết.
+**Trước:**
+> Mô hình chạy trên máy cục bộ. Nói cách khác, dữ liệu không rời khỏi máy tính của anh. Điều này có nghĩa là thông tin khách hàng không bị gửi ra ngoài.
+**Sau:**
+> Mô hình chạy ngay trên máy của anh nên thông tin khách hàng không bị gửi ra ngoài.
+
+### 43. Đoạn nào cũng mở bằng câu chủ đề rồi giải thích
+
+**Dấu hiệu:** mọi đoạn đi cùng một khuôn: câu đầu nêu ý khái quát, các câu sau giải thích và cho ví dụ, câu cuối chốt lại.
+**Vì sao:** Khuôn này không sai, nhưng lặp ở mọi đoạn thì đọc như dàn ý được viết thành văn. Cho vài đoạn bắt đầu thẳng vào chi tiết, sự việc hoặc con số, để ý khái quát tự hiện ra. Văn học thuật và văn hành chính dùng khuôn này là bình thường. *(yếu)*
+**Trước:**
+> Quản lý thời gian là kỹ năng quan trọng với nhân viên văn phòng. Chị Hoa thường chặn hai tiếng buổi sáng để làm báo cáo, không nhận cuộc họp nào trong khung giờ đó.
+**Sau:**
+> Chị Hoa chặn hai tiếng buổi sáng để làm báo cáo, không nhận cuộc họp nào trong khung giờ đó.
 
 ---
 
@@ -174,7 +221,7 @@ Nhóm A tới F dựa trên blader/humanizer (bản 3.1.0) và trang "Signs of A
 ### 18. Mượn uy tín không tên
 
 **Dấu hiệu:** các chuyên gia cho rằng; nhiều nghiên cứu chỉ ra; theo giới phân tích; được nhiều báo lớn đưa tin.
-**Vì sao:** Một uy tín không tên đỡ lưng cho nhận định. Nguồn có tên thật thì nêu tên và nội dung; không có thì bỏ nhận định. Không tự bịa tên tác giả, năm, tên báo.
+**Vì sao:** Một uy tín không tên đỡ lưng cho nhận định. Nguồn có tên thật thì nêu tên và nội dung; không có thì bỏ nhận định. Không tự bịa tên tác giả, năm, tên báo. Khi nêu nguồn, giữ đúng độ mạnh của nguồn: nguồn nói "có liên quan" thì không viết thành "gây ra", nguồn chỉ ra tương quan thì không viết thành nhân quả, nguồn nói "có thể" thì không viết thành "chắc chắn".
 **Trước:**
 > Nhiều chuyên gia hàng đầu cho rằng AI sẽ thay đổi hoàn toàn ngành giáo dục.
 **Sau:**
@@ -188,6 +235,25 @@ Nhóm A tới F dựa trên blader/humanizer (bản 3.1.0) và trang "Signs of A
 > Phòng đào tạo đóng vai trò là đầu mối, sở hữu đội ngũ 12 giảng viên.
 **Sau:**
 > Phòng đào tạo là đầu mối, có 12 giảng viên.
+
+### 34. Phạm vi giả "từ... đến..."
+
+**Dấu hiệu:** "từ doanh nghiệp nhỏ đến tập đoàn lớn"; "từ học sinh đến người đi làm"; "từ thành thị đến nông thôn"; "từ A đến Z", khi hai đầu không nằm trên cùng một thang đo và câu không nói gì về khoảng giữa.
+**Vì sao:** Cấu trúc này tạo cảm giác bao trùm mà không nói ai, cái gì cụ thể. Nêu đúng đối tượng mà nguồn có; nguồn không có thì nói hẹp lại.
+**Trước:**
+> Khóa học dành cho nhân viên hành chính và kế toán, phù hợp với mọi người từ sinh viên mới ra trường đến lãnh đạo cấp cao.
+**Sau:**
+> Khóa học dành cho nhân viên hành chính và kế toán.
+
+### 37. Định lượng mơ hồ, khái quát hóa
+
+**Dấu hiệu:** "nhiều", "phần lớn", "hầu hết", "đáng kể", "ngày càng nhiều", "được đánh giá cao", "được công nhận rộng rãi", "được đông đảo người dùng tin dùng", khi không có số liệu đi kèm.
+**Vì sao:** Từ chỉ lượng nghe như có số mà không có số. Có số liệu thì nêu số và nguồn; không có thì nói hẹp lại thành điều người viết biết chắc. Không tự điền số.
+**Trước:**
+> Phần mềm được đánh giá cao và giúp giảm đáng kể thời gian xử lý hồ sơ.
+**Sau:**
+> (Có số liệu) Sau hai tháng dùng phần mềm, thời gian xử lý một hồ sơ giảm từ 40 xuống 25 phút.
+> (Không có số liệu) Ở phòng tôi, xử lý hồ sơ nhanh hơn từ khi dùng phần mềm.
 
 ---
 
@@ -212,9 +278,27 @@ Nhóm A tới F dựa trên blader/humanizer (bản 3.1.0) và trang "Signs of A
 **Sau:**
 > Lợi ích của việc ứng dụng AI
 
-### 22. Ngoặc kép cong
+### 22. Trộn ngoặc kép cong và ngoặc kép thẳng
 
-**Dấu hiệu:** ngoặc kép cong ở nơi người viết vẫn dùng ngoặc thẳng. *(yếu)*: phần lớn trình soạn thảo tự đổi.
+**Dấu hiệu:** trong cùng một văn bản, chỗ dùng ngoặc kép cong (“ ”), chỗ dùng ngoặc kép thẳng (" "), thường do dán đoạn máy viết vào bài tự gõ. Chỉ dùng ngoặc cong cả bài thì không phải dấu vết, vì nhiều trình soạn thảo tự đổi sang ngoặc cong.
+**Vì sao:** Hai kiểu ngoặc lẫn nhau cho thấy văn bản ghép từ hai nguồn. Thống nhất theo kiểu người viết dùng nhiều hơn. *(yếu)*
+**Trước:**
+> Anh ấy hứa “xong trong tuần”, nhưng sáng nay lại bảo "để tháng sau".
+**Sau:**
+> Anh ấy hứa "xong trong tuần", nhưng sáng nay lại bảo "để tháng sau".
+
+### 40. Khung bài thừa
+
+**Dấu hiệu:** tiêu đề cho một đoạn chỉ có hai câu; danh sách gạch đầu dòng ở chỗ hai câu văn là đủ; khung "Giới thiệu, Thách thức, Giải pháp, Kết luận" cho bài ngắn dưới khoảng 400 chữ; bảng chỉ có hai dòng.
+**Vì sao:** Khung dành cho văn bản dài, cần điều hướng. Bài ngắn mà dựng khung trông như báo cáo rỗng ruột. Gộp thành đoạn văn liền; giữ tiêu đề và bảng khi văn bản đủ dài hoặc người đọc cần tra cứu.
+**Trước:**
+> ## Giới thiệu
+> Nhóm em thử dùng AI để soạn biên bản họp.
+> ## Kết quả
+> - Có bản nháp sau 10 phút
+> - Phải sửa lại tên người
+**Sau:**
+> Nhóm em thử dùng AI soạn biên bản họp. Sau 10 phút đã có bản nháp, chỉ phải sửa lại tên người.
 
 ---
 
@@ -251,6 +335,15 @@ Bỏ ngay, không cần viết lại.
 **Dấu hiệu:** "Bảng dưới đây so sánh..."; "Phần này được tổng hợp từ..."; "Bài viết được chia thành ba phần".
 **Vì sao:** Người đọc tự thấy bố cục. Chỉ giữ khi người đọc không tự suy ra được. *(yếu)*
 
+### 39. Chỗ trống mẫu còn sót
+
+**Dấu hiệu:** "[Tên công ty]"; "[Chèn số liệu]"; "[Tên khách hàng]"; "XX%"; "<ngày>"; "Kính gửi Anh/Chị [Tên]"; đoạn "Lorem ipsum".
+**Vì sao:** Máy để chỗ trống cho người dùng tự điền, người dùng quên điền. Không tự điền thay: hỏi người viết thông tin thật; chưa có thì bỏ phần đó, chỉ giữ điều người viết xác nhận được.
+**Trước:**
+> Năm qua, [Tên công ty] đã tăng trưởng XX% nhờ ứng dụng AI.
+**Sau:**
+> (Hỏi người viết tên công ty và con số thật. Chưa có số thì bỏ vế tăng trưởng, không đoán.)
+
 ---
 
 ## F. Viết cho sai người đọc
@@ -263,6 +356,79 @@ Bỏ ngay, không cần viết lại.
 > Như anh đã biết, hôm qua team gặp lỗi khi gửi báo cáo. Sau khi kiểm tra, em thấy nguyên nhân là file quá nặng. Vì vậy em đề xuất nén file trước khi gửi.
 **Sau:**
 > Em sẽ nén file trước khi gửi; hôm qua lỗi là do file quá nặng.
+
+### 36. Cân bằng hai phía cho an toàn
+
+**Dấu hiệu:** "Mỗi phương án đều có ưu và nhược điểm riêng"; "Tùy vào nhu cầu của từng người"; "Không có câu trả lời nào đúng cho tất cả"; "Cả hai đều có giá trị riêng".
+**Vì sao:** Câu trung lập né việc kết luận, trong khi người đọc đang cần biết nên chọn gì. Sửa thành điều kiện cụ thể "nếu X thì A, nếu Y thì B", lấy điều kiện từ chính nội dung bài. Không bịa ra ý kiến hay lựa chọn mà người viết không có; nếu người viết thật sự chưa quyết thì nói rõ đang phân vân ở điểm nào.
+**Trước:**
+> Thuê ngoài và tự tuyển đều có ưu và nhược điểm riêng, tùy vào tình hình của mỗi doanh nghiệp.
+**Sau:**
+> (Bài đã nêu thuê ngoài nhanh nhưng người làm không nắm quy trình nội bộ) Việc chỉ kéo dài vài tháng thì thuê ngoài; cần người làm lâu dài và hiểu quy trình nội bộ thì tự tuyển.
+
+---
+
+## G. Tu từ diễn kịch
+
+### 28. Hai chấm "lật bài"
+
+**Dấu hiệu:** một cụm ngắn, hai chấm, rồi vế sau tung ra như đáp án: "Điểm hay nhất: nó tự học."; "Kết quả: tăng gấp đôi."; "Bí quyết: kiên trì."; "Vấn đề là: không ai đọc báo cáo."
+**Vì sao:** Hai chấm tạo một quãng nghỉ giả để vế sau nghe như một phát hiện. Viết lại thành câu bình thường có chủ ngữ, vị ngữ. Hai chấm để liệt kê, dẫn lời hoặc giải thích thì vẫn bình thường.
+**Trước:**
+> Sau ba tháng dùng chatbot trả lời khách, kết quả: số tin nhắn bị bỏ sót giảm một nửa.
+**Sau:**
+> Sau ba tháng dùng chatbot trả lời khách, số tin nhắn bị bỏ sót giảm một nửa.
+
+### 29. Tự hỏi tự trả lời
+
+**Dấu hiệu:** "Kết quả? Tăng 30%."; "Bạn có biết...?" ở đầu đoạn; "Vậy điều gì đã xảy ra?"; "Tại sao điều này quan trọng?" rồi trả lời ngay câu sau.
+**Vì sao:** Câu hỏi không chờ ai trả lời, chỉ để dựng kịch tính. Nói thẳng câu trả lời. Giữ câu hỏi khi đó là câu người đọc thật sự đang hỏi, ví dụ trong mục hỏi đáp.
+**Trước:**
+> Vậy điều gì đã xảy ra sau khi áp dụng? Doanh thu quý 3 tăng 30%.
+**Sau:**
+> Quý 3, sau khi áp dụng, doanh thu tăng 30%.
+
+### 30. Liệt kê phủ định
+
+**Dấu hiệu:** "Không phải A. Không phải B. Mà là C."; "Không phải vì lười, cũng không phải vì thiếu tiền, mà vì..."; dãy "Không... Không... Chỉ có...".
+**Vì sao:** Gạt đi những đáp án không ai đưa ra để dựng màn ra mắt cho ý thật; cùng họ với mẫu 1 và mẫu 2. Nói thẳng C. Chỉ giữ A, B khi người đọc thật sự đang nghĩ vậy và cần được sửa.
+**Trước:**
+> Lý do khách bỏ đi không phải giá. Không phải sản phẩm. Mà là thời gian chờ phản hồi.
+**Sau:**
+> Khách bỏ đi vì phải chờ phản hồi quá lâu.
+
+### 31. Vật vô tri làm việc của người
+
+**Dấu hiệu:** "con số biết nói"; "dữ liệu lên tiếng"; "thị trường đặt ra câu hỏi"; "báo cáo kể một câu chuyện"; "kết quả tự nói lên tất cả"; "thời gian sẽ trả lời".
+**Vì sao:** Gán việc của người cho đồ vật để câu nghe sống động, nhưng làm mất người thật sự phải kết luận hay hành động. Đưa người làm về chủ ngữ, hoặc nêu thẳng con số.
+**Trước:**
+> Doanh số quý này giảm 15%. Những con số biết nói ấy đặt ra câu hỏi lớn cho đội bán hàng.
+**Sau:**
+> Doanh số quý này giảm 15%, và đội bán hàng cần tìm ra lý do.
+
+---
+
+## H. Văn học thuật
+
+Ví dụ trong nhóm này dùng tên tác giả giả định, chỉ để minh họa cấu trúc câu.
+
+### 41. Tổng quan liệt kê từng nghiên cứu
+
+**Dấu hiệu:** phần tổng quan tài liệu mà mỗi câu là một nghiên cứu: "A (2020) cho thấy X. B (2021) cho thấy Y. C (2022) cho thấy Z."; "Một nghiên cứu khác của..."; không câu nào so sánh các nghiên cứu với nhau.
+**Vì sao:** Đó là danh mục, chưa phải tổng quan. Người đọc cần biết các nghiên cứu đồng ý ở đâu, khác nhau ở đâu, và còn bỏ trống gì. Nhóm các bài theo ý, rồi chỉ ra chỗ khác nhau (mẫu, cách đo, bối cảnh). Không gán cho bài gốc kết luận mà bài đó không nói.
+**Trước:**
+> Nguyễn (2020) cho thấy chatbot giúp sinh viên tự học tốt hơn. Trần (2021) cho thấy chatbot làm tăng hứng thú học. Lê (2022) cho thấy sinh viên dễ phụ thuộc vào chatbot.
+**Sau:**
+> Nguyễn (2020) và Trần (2021) ghi nhận chatbot có lợi cho việc tự học và hứng thú học, còn Lê (2022) cho thấy mặt trái là sinh viên dễ phụ thuộc. Ba bài đo ba kết quả khác nhau, nên chưa thể so trực tiếp.
+
+### 42. Hạn chế, hướng nghiên cứu chung chung
+
+**Dấu hiệu:** "Nghiên cứu còn một số hạn chế nhất định"; "cỡ mẫu còn nhỏ"; "cần nghiên cứu thêm trong tương lai"; "mở rộng phạm vi nghiên cứu", mà không nói hạn chế đó ảnh hưởng tới kết luận nào.
+**Vì sao:** Câu hạn chế kiểu này đúng với mọi bài, nên không giúp người đọc đánh giá bài này. Nêu hạn chế cụ thể và hệ quả của nó: kết luận nào yếu đi, vì sao, nghiên cứu sau cần làm khác gì. Lấy từ chính thiết kế nghiên cứu, không thêm hạn chế bài không có.
+**Trước:**
+> Nghiên cứu còn hạn chế do cỡ mẫu nhỏ. Cần có thêm các nghiên cứu trong tương lai.
+**Sau:**
+> Mẫu chỉ gồm 42 sinh viên ngành kinh tế của một trường, nên chưa thể nói kết quả đúng với sinh viên khối kỹ thuật. Nghiên cứu sau cần khảo sát thêm sinh viên kỹ thuật để kiểm tra điều này.
 
 ---
 
@@ -314,14 +480,54 @@ Bỏ ngay, không cần viết lại.
 **Dấu hiệu:** đoạn văn mà câu nào cũng dài 25 tới 35 chữ, cùng nhịp, cùng có dấu phẩy ở giữa.
 **Vì sao:** Văn người thật có câu dài câu ngắn xen nhau. Tách bớt câu, thêm vài câu ngắn có thông tin. *(yếu)*
 
+### V7. Chuỗi bổ ngữ dài, dấu phẩy dày, chủ ngữ bị lạc
+
+**Dấu hiệu:** danh từ kéo theo một chuỗi bổ ngữ dài ("giải pháp quản lý dự án tích hợp trí tuệ nhân tạo thế hệ mới dành cho doanh nghiệp vừa và nhỏ tại Việt Nam"); nhiều vế phụ chen giữa chủ ngữ và động từ chính, ngăn bằng dấu phẩy; đọc hết câu mới biết ai làm gì.
+**Vì sao:** Bổ ngữ chồng nhiều tầng, trước hoặc sau danh từ, làm người đọc mất dấu danh từ chính. Tách thành hai câu, đưa chủ ngữ và động từ lại gần nhau, bỏ bớt bổ ngữ không mang thông tin.
+**Trước:**
+> Hệ thống, sau khi được nhóm phát triển, với sự hỗ trợ của phòng công nghệ thông tin, kiểm thử trong ba tháng tại hai chi nhánh, đã chính thức được đưa vào sử dụng.
+**Sau:**
+> Nhóm phát triển và phòng công nghệ thông tin kiểm thử hệ thống ba tháng ở hai chi nhánh. Sau đó hệ thống được đưa vào dùng chính thức.
+
+### V8. Từ thừa nghĩa lặp
+
+**Dấu hiệu:** "hoàn toàn đầy đủ"; "tái lập lại"; "các những"; "quay trở lại"; "cùng chung"; "đang trong quá trình"; "hiện nay đang".
+**Vì sao:** Hai từ cùng nghĩa đứng cạnh nhau làm câu dài mà không thêm ý. Quy tắc: bỏ đi mà nghĩa không đổi thì bỏ. Chỉ bỏ phần thừa, không nhân tiện đổi giọng: văn trang trọng vẫn giữ trang trọng, đừng biến thành suồng sã.
+**Trước:**
+> Dự án hiện nay đang trong quá trình triển khai và sẽ quay trở lại giai đoạn kiểm thử khi có hoàn toàn đầy đủ dữ liệu.
+**Sau:**
+> Dự án đang triển khai và sẽ trở lại giai đoạn kiểm thử khi có đủ dữ liệu.
+
 ---
+
+## Dấu hiệu người viết thật (giữ lại)
+
+Những dấu hiệu dưới đây cho thấy giọng của chính người viết. Gặp trong bản gốc thì giữ, đừng "sửa cho chuẩn". Đây là tín hiệu để giữ, không phải công thức để chèn: rắc "nhé", "Mà", lời chen trong ngoặc vào bài theo khuôn sẽ tạo ra một dấu vết mới, và bài không còn là giọng của người viết.
+
+- Một lời rào khi người viết thật sự không chắc ("chắc là", "theo em hiểu").
+- Câu khẳng định dứt khoát khi người viết biết chắc.
+- Động từ thường: làm, có, là, dùng, xem.
+- Chút dài dòng tự nhiên của văn nói: "để mà", "thì là", "cái việc".
+- Câu mở bằng "Mà", "Nhưng", "Thế nên".
+- Câu thiếu chủ ngữ một cách tự nhiên trong văn nói ("Đi họp về là mệt rồi.").
+- Trợ từ cuối câu trong văn thân mật: nhé, chứ, đấy.
+- Đề ngữ "X thì...": "Cái máy in thì hỏng từ tuần trước."
+- Lời chen trong ngoặc, tự sửa giữa câu.
+- Ý kiến riêng, cảm xúc lẫn lộn, băn khoăn chưa giải quyết.
+- Chi tiết cụ thể, lạ: tên quán, con số thật, câu ai đó đã nói.
+- Cách nói địa phương, tiếng lóng, câu đùa của nhóm, khi người viết vốn dùng.
+
+## Không phải dấu hiệu AI
+
+Đừng sửa những thứ sau chỉ vì nghi là máy viết:
+
+- Ngữ pháp chuẩn, không lỗi chính tả. Người viết cẩn thận cũng viết đúng; không bao giờ cố thêm lỗi.
+- Văn nhạt, an toàn. Văn có thể chán mà vẫn là người viết.
+- Một từ trang trọng đứng riêng ("đảm bảo", "tối ưu").
+- Một từ nối ở chỗ cần nối ("Tuy nhiên", "Ngoài ra").
+- Nhận định không kèm nguồn trong văn thường ngày như blog, email: người ta vẫn nói ý của mình.
+- Tiêu đề mục thật trong bài học thuật (Phương pháp, Kết quả, Thảo luận): đó là cấu trúc văn bản theo quy định, không phải trang trí như mẫu 40.
 
 ## Khi nào không sửa
 
 Mỗi mẫu là một lựa chọn mặc định của máy, nhưng người viết vẫn có thể chọn y như vậy có chủ đích. Không sửa trong trích dẫn, tên riêng, tiêu đề tác phẩm, khẩu hiệu thật của tổ chức, hoặc đoạn đang bàn về chính cụm từ đó. Lời chào, lời kết trong thư, email là bình thường. Một dấu vết đơn lẻ chưa nói lên gì; nhiều dấu vết cùng lúc mới đáng sửa.
-
-Giữ lại những chi tiết mang giọng người viết:
-- Chi tiết cụ thể, lạ: tên quán, con số thật, câu ai đó đã nói.
-- Cảm xúc lẫn lộn, băn khoăn chưa giải quyết.
-- Cách nói địa phương, tiếng lóng, câu đùa của nhóm.
-- Lời chen ngang, tự sửa giữa câu.

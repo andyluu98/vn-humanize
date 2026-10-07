@@ -1,0 +1,7 @@
+Đọc xong bài của nhóm Lewis về RAG, mình ghi lại mấy chỗ còn thắc mắc.
+
+Ý chính của bài không khó. Thay vì bắt mô hình nhớ hết kiến thức trong tham số, họ cho nó tra một kho văn bản trước khi trả lời. Phần truy hồi dùng DPR, phần sinh dùng BART. Hai phần được huấn luyện chung, nhưng bộ mã hóa tài liệu thì giữ cố định, chỉ cập nhật bộ mã hóa câu hỏi. Họ nói cập nhật cả kho chỉ mục thì quá tốn.
+
+Chỗ mình chưa hiểu là phần so sánh RAG-Sequence với RAG-Token. Trên mấy bộ hỏi đáp mở thì hai cách gần như ngang nhau, vậy mà sang sinh câu hỏi kiểu Jeopardy thì RAG-Token lại nhỉnh hơn. Bài giải thích là câu hỏi Jeopardy thường gom thông tin từ nhiều tài liệu. Nghe hợp lý. Nhưng mình chưa thấy thí nghiệm nào kiểm chứng riêng điều này.
+
+Với tiếng Việt thì vướng ngay ở bộ truy hồi. DPR học trên dữ liệu tiếng Anh, đem sang văn bản pháp lý tiếng Việt chắc phải huấn luyện lại. Tuần sau thử với bộ dữ liệu nhỏ trước đã.

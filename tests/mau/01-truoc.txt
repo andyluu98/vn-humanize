@@ -1,0 +1,9 @@
+Theo yêu cầu của đề bài, bài viết này sẽ phân tích nguyên nhân khiến dự án xây dựng phần mềm quản lý kho của công ty Minh Phát bị chậm tiến độ.
+
+Trong bối cảnh chuyển đổi số ngày càng phát triển, quản lý dự án đóng vai trò quan trọng đối với sự thành công của mọi doanh nghiệp. Dự án được triển khai từ tháng 3/2025 với ngân sách 850 triệu đồng và đội ngũ 9 thành viên. Tuy nhiên, dự án đã bị chậm 11 tuần so với kế hoạch ban đầu.
+
+Nguyên nhân thứ nhất là gì? Đó là việc thu thập yêu cầu chưa được thực hiện một cách đầy đủ. Bên cạnh đó, khách hàng đã thay đổi yêu cầu 4 lần trong giai đoạn phát triển. Ngoài ra, nhóm dự án không có quy trình kiểm soát thay đổi. Hơn nữa, việc giao tiếp giữa các bên còn nhiều hạn chế.
+
+Điều đáng chú ý là: phần lớn các vấn đề đều có thể được phòng tránh. Nói cách khác, nếu áp dụng quy trình quản lý thay đổi một cách chặt chẽ, dự án có thể hoàn thành đúng hạn. Điều này có nghĩa là công tác lập kế hoạch đóng vai trò then chốt.
+
+Tóm lại, có thể nói rằng dự án là bài học quý giá về tầm quan trọng của việc quản lý yêu cầu. Tuy nhiên, cần nghiên cứu thêm để đưa ra giải pháp toàn diện.

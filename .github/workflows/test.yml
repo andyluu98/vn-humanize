@@ -1,0 +1,21 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Cài pytest
+        run: python -m pip install pytest
+      - name: Không có gạch dài, gạch vừa trong file đã theo dõi
+        run: |
+          python -c "import subprocess,sys; d=(chr(0x2014).encode(),chr(0x2013).encode()); bad=[f for f in subprocess.check_output(['git','ls-files'],text=True).splitlines() if any(x in open(f,'rb').read() for x in d)]; print('\n'.join(bad)); sys.exit(1 if bad else 0)"
+      - name: Chạy kiểm thử
+        run: python -m pytest -q

@@ -1,0 +1,5 @@
+Dự án phần mềm quản lý kho của công ty Minh Phát bắt đầu từ tháng 3/2025, ngân sách 850 triệu đồng, nhóm 9 người. Dự án đã trễ 11 tuần so với kế hoạch ban đầu.
+
+Theo em, chậm trễ bắt đầu từ khâu lấy yêu cầu. Yêu cầu thu thập chưa đủ, rồi trong lúc làm thì khách hàng đổi yêu cầu 4 lần. Nhóm lại không có quy trình kiểm soát thay đổi. Các bên trao đổi với nhau cũng chưa tốt.
+
+Phần lớn những chuyện này tránh được. Nếu quản lý thay đổi chặt từ đầu, nhóm có thể đã xong đúng hạn. Bài học em rút ra là phải chốt yêu cầu và cách xử lý thay đổi trước khi viết dòng code đầu tiên. Còn giải pháp cụ thể thì em chưa đủ dữ liệu để đề xuất.
