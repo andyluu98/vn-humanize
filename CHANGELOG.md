@@ -1,5 +1,15 @@
 # Lịch sử thay đổi
 
+## 2.1.0 (12/11/2026)
+
+Học viên không còn phải đưa văn mẫu mới dùng được skill.
+
+- Giọng mặc định: file mới `references/giong-mac-dinh.md`, mười điều và ba đoạn mẫu nhịp. Chưa có văn mẫu, chưa có hồ sơ thì viết luôn theo giọng này.
+- Hồ sơ giọng dùng chung ở `~/.claude/ho-so-giong-van.md`, đọc ở mọi thư mục; hồ sơ trong thư mục dự án vẫn thắng nếu có. Lập hồ sơ được bằng 6 câu trắc nghiệm khi không có văn tự viết. Chế độ mới "Tạo hồ sơ giọng".
+- Viết mới: bỏ "bắt buộc hỏi chi tiết trước". Viết luôn, chỉ hỏi tối đa 2 câu khi thiếu điều không thể đoán; cuối bài gợi ý chi tiết thật nên thêm. Bài quan trọng hoặc người dùng muốn thì vẫn hỏi trước.
+- Khối luôn bật: `luon-bat.md` cùng `scripts/cai-luon-bat.ps1` và `scripts/cai-luon-bat.sh`, chèn quy tắc cốt lõi vào `~/.claude/CLAUDE.md` để mọi bài tiếng Việt theo giọng tự nhiên mà không cần gọi skill. Script sao lưu trước khi ghi, chạy lại không chèn trùng, có lệnh gỡ.
+- README: cài đặt ba bước, văn mẫu chuyển thành tùy chọn.
+
 ## 2.0.0 (07/10/2026)
 
 Tham khảo thêm 4 repo: ryanmaule/humanize (từ petergyang/no-ai-slop), korECM/humanize, shir-danishyar/humanize, David-Saeteros/claude-skills. Chỉ lấy ý tưởng về chất lượng văn; không lấy mẹo lừa máy dò.

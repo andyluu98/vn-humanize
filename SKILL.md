@@ -4,14 +4,15 @@ description: >
   Giúp văn tiếng Việt viết có AI hỗ trợ đọc lên như chính người viết: nhịp tự nhiên, đúng giọng,
   có chi tiết thật, giữ nguyên nội dung. Ba chế độ: Sửa (viết lại bài có giọng AI, mặc định),
   Soát (chỉ ra dấu vết, trích câu, số mẫu, gợi ý sửa, không chấm điểm), Viết mới (soạn từ ý của
-  người dùng, hỏi chi tiết thật trước). Dùng khi người dùng nhờ "humanize", "viết lại cho bớt
-  giọng AI", "sửa cho tự nhiên", "soát giọng AI", "bỏ văn máy", hoặc rà bài tập, tiểu luận, bài
-  đăng, email, báo cáo tiếng Việt. Danh mục 51 mẫu dấu vết: "không chỉ... mà còn", câu chốt một
+  người dùng, viết luôn theo giọng mặc định hoặc hồ sơ giọng, không bắt đưa văn mẫu). Dùng khi
+  người dùng nhờ "humanize", "viết lại cho bớt giọng AI", "sửa cho tự nhiên", "soát giọng AI",
+  "bỏ văn máy", "viết cho giống người", "tạo hồ sơ giọng", hoặc nhờ soạn, rà bài tập, tiểu luận,
+  bài đăng, email, báo cáo tiếng Việt. Danh mục 51 mẫu dấu vết: "không chỉ... mà còn", câu chốt một
   dòng, bộ ba gượng ép, gạch dài, từ sáo ("đóng vai trò then chốt", "kỷ nguyên số"), hai chấm lật
   bài, tự hỏi tự trả lời, văn dịch, lời chatbot sót lại. Không dùng mẹo lừa máy dò AI.
 license: MIT
 metadata:
-  version: "2.0.0"
+  version: "2.1.0"
   based_on: "blader/humanizer 3.1.0"
 ---
 
@@ -46,7 +47,9 @@ Hai nguyên tắc rút ra: câu nào giữ lại cũng phải cho người đọ
 8. **Không bịa giọng "tôi".** Bản gốc là văn của tổ chức, viết ở ngôi thứ ba (thông báo công ty, báo cáo phòng, công văn) thì giữ ngôi đó; không tự chuyển thành chuyện kể cá nhân.
 9. **Không làm khẳng định mạnh hơn nguồn.** Nguồn nói "có thể", "ở nhóm khảo sát" thì bản sửa không được thành "chắc chắn", "mọi người". Bỏ bớt rào đón thừa là được, bỏ rào đón có căn cứ là sai.
 
-## Ba chế độ
+## Các chế độ
+
+Skill chỉ tự chạy khi yêu cầu khớp phần mô tả. Muốn mọi bài tiếng Việt Claude viết đều theo giọng tự nhiên, kể cả khi không nhắc tới skill, cài khối luôn bật vào `~/.claude/CLAUDE.md` (xem `luon-bat.md`).
 
 ### Sửa (mặc định)
 
@@ -68,9 +71,18 @@ Người dùng nói "soát", "kiểm tra giọng AI", "chỉ ra chỗ nào nghe 
 
 Người dùng đưa ý, dàn bài, ghi chú và nhờ soạn bài. Áp mọi quy tắc của skill ngay khi viết, không viết kiểu AI rồi mới sửa.
 
-- **Bắt buộc hỏi chi tiết thật trước khi viết** theo `references/khai-thac-chi-tiet.md`: ví dụ của chính người viết, con số họ đo, chuyện xảy ra khi nào, ở đâu.
-- Có hồ sơ giọng văn hoặc văn mẫu thì viết theo đó.
-- Người dùng không có chi tiết thì viết hẹp và chung hơn, không giả cụ thể.
+- **Viết luôn, không chặn người dùng.** Giọng lấy theo thứ tự ở mục "Giọng văn". Không đòi văn mẫu, không đòi lập hồ sơ trước.
+- **Chỉ hỏi trước khi thiếu điều không thể đoán:** người nhận là ai, cần người đọc làm gì, hạn chót (với email, tin nhắn). Hỏi tối đa 2 câu, một lượt. Đủ để viết thì không hỏi.
+- Ý nào cần chi tiết mà người dùng chưa đưa thì viết hẹp và chung hơn, không giả cụ thể. Cuối bài thêm một dòng gợi ý 1-2 chi tiết thật nên bổ sung (chọn từ `references/khai-thac-chi-tiet.md`), ví dụ: "Thêm số hóa đơn mỗi tháng và thời gian trước, sau khi dùng AI thì bài sẽ thuyết phục hơn."
+- Người dùng nói "hỏi mình trước" hoặc bài quan trọng (bài nộp chấm điểm, hồ sơ dự thi, bài đăng của tổ chức) thì hỏi chi tiết thật trước theo `references/khai-thac-chi-tiet.md`, mỗi lượt tối đa ba câu.
+
+### Tạo hồ sơ giọng
+
+Người dùng nói "tạo hồ sơ giọng", "học giọng của mình", "lưu giọng văn". Làm theo `references/giong-van.md`:
+
+- Có văn tự viết: lập hồ sơ từ văn mẫu.
+- Không có: hỏi 6 câu trắc nghiệm trong `giong-van.md`, lập hồ sơ tạm.
+- Lưu vào hồ sơ dùng chung `~/.claude/ho-so-giong-van.md` để mọi lần sau tự dùng. Báo người dùng đường dẫn file và cách sửa.
 
 ## Quy trình (chế độ Sửa)
 
@@ -78,7 +90,7 @@ Người dùng đưa ý, dàn bài, ghi chú và nhờ soạn bài. Áp mọi qu
 
 1. **Đọc nguyên tắc bổ sung** ở `references/nguyen-tac-bo-sung.md`.
 2. **Xác định loại văn, người đọc, nơi đăng.** Bài tập, tiểu luận, email, bài đăng mạng xã hội, báo cáo, công văn, bài học thuật. Không suy ra được thì hỏi ba điều: viết cho ai, đăng hoặc nộp ở đâu, muốn người đọc làm gì sau khi đọc.
-3. **Nắm ý chính và giọng gốc.** Viết ra (cho mình) ý chính của bài và 3-5 nét giọng cần giữ ngay trong bản gốc: cách xưng hô, câu cửa miệng, kiểu mở câu, chi tiết lạ, câu đùa. Có hồ sơ giọng văn thì đọc kèm.
+3. **Nắm ý chính và giọng gốc.** Viết ra (cho mình) ý chính của bài và 3-5 nét giọng cần giữ ngay trong bản gốc: cách xưng hô, câu cửa miệng, kiểu mở câu, chi tiết lạ, câu đùa. Đọc hồ sơ giọng văn nếu có (mục "Giọng văn").
 4. **Quét máy:** chạy `python scripts/quet-dau-vet.py <file>` để bắt dấu vết về chữ (từ sáo, gạch dài, emoji, lời chatbot). Máy không bắt được dấu vết cấu trúc.
 5. **Đánh dấu dấu vết bằng mắt.** Đọc hết một lượt, đánh dấu mọi mẫu, mạnh trước yếu sau. Xem cả hình dạng bài: ba đoạn song song, câu chốt sau mỗi mục, đoạn nào cũng mở bằng câu chủ đề.
 6. **Khai thác chi tiết thật nếu bài trống rỗng.** Bài toàn câu đúng mà chung chung thì hỏi người viết theo `references/khai-thac-chi-tiet.md`. Không bịa thay họ.
@@ -89,11 +101,18 @@ Người dùng đưa ý, dàn bài, ghi chú và nhờ soạn bài. Áp mọi qu
 
 ## Giọng văn
 
-**Văn mẫu thắng tất cả.** Người dùng đưa văn tự viết (bài cũ, email cũ) thì theo đúng độ dài câu, cách chọn từ, dấu câu, cách mở câu, cách xưng hô của mẫu. Văn mẫu thắng mọi mẫu dấu vết, kể cả quy tắc gạch dài. Văn mẫu phải do chính người viết viết, không phải bài AI viết hộ.
+Văn mẫu và hồ sơ giọng giúp bài giống người viết hơn, nhưng **không bao giờ là điều kiện để bắt đầu**. Không có thì viết ngay theo giọng mặc định.
 
-**Hồ sơ giọng văn.** Có từ 150 chữ văn mẫu trở lên thì lập hồ sơ theo `references/giong-van.md` và lưu thành `ho-so-giong-van.md` để dùng lại lần sau.
+Lấy giọng theo thứ tự, cái trước thắng cái sau:
 
-**Không có văn mẫu** thì lấy giọng theo thể loại:
+1. **Văn mẫu đưa trong cuộc trò chuyện.** Theo đúng độ dài câu, cách chọn từ, dấu câu, cách mở câu, cách xưng hô của mẫu. Văn mẫu thắng mọi mẫu dấu vết, kể cả quy tắc gạch dài. Văn mẫu phải do chính người viết viết, không phải bài AI viết hộ.
+2. **Hồ sơ riêng dự án:** `ho-so-giong-van.md` trong thư mục làm việc.
+3. **Hồ sơ dùng chung:** `~/.claude/ho-so-giong-van.md`. Đọc file này mỗi lần dùng skill nếu có.
+4. **Giọng mặc định** trong `references/giong-mac-dinh.md`, kết hợp bảng thể loại bên dưới.
+
+Người dùng đưa từ 150 chữ văn tự viết trở lên mà chưa có hồ sơ thì hỏi một câu có muốn lưu thành hồ sơ dùng chung không, theo `references/giong-van.md`.
+
+**Bảng giọng theo thể loại** (dùng cùng giọng mặc định, hoặc khi hồ sơ không nói tới loại văn đang viết):
 
 | Thể loại | Xưng hô | Câu cụt | Trợ từ cuối câu (nhé, chứ, ạ) | Gạch dài (ngân sách) | Emoji | Tiêu đề mục | Mức rào đón |
 |---|---|---|---|---|---|---|---|
@@ -126,7 +145,8 @@ Câu ngắn phải có thông tin. Câu cụt chỉ để tạo kịch tính là
 - **Chế độ học:** người dùng muốn học cách tự sửa thì giải thích từng chỗ theo dạng:
   `câu gốc` → `câu sửa` (mẫu N, lý do ngắn)
 - **Chế độ Soát:** chỉ bảng dấu vết như mô tả ở trên.
-- **Chế độ Viết mới:** hỏi chi tiết trước; có đủ thì trả bài, kèm một dòng nêu chỗ nào đang viết chung vì thiếu chi tiết.
+- **Chế độ Viết mới:** trả bài ngay, kèm một dòng gợi ý chi tiết thật nên bổ sung ở chỗ đang viết chung. Không kèm bản nháp, không kèm danh sách dấu vết.
+- **Skill được khối luôn bật gọi giữa việc khác** (viết email, bài đăng trong lúc làm việc khác): chỉ trả bản cuối, không giải thích quy trình.
 
 Bài nộp chấm điểm, bài báo, luận văn: thêm một dòng nhắc khai báo dùng AI ở cuối.
 
@@ -173,7 +193,10 @@ Tên nhóm và ví dụ đầy đủ theo file danh mục. Một dấu vết đ�
 |---|---|
 | `references/cac-mau-dau-vet-ai.md` | Mọi lần sửa, soát |
 | `references/nguyen-tac-bo-sung.md` | Mọi lần dùng skill |
-| `references/giong-van.md` | Có văn mẫu của người viết, hoặc cần lập, cập nhật hồ sơ giọng |
+| `references/giong-mac-dinh.md` | Chưa có văn mẫu, chưa có hồ sơ giọng |
+| `references/giong-van.md` | Có văn mẫu của người viết, hoặc cần lập, cập nhật hồ sơ giọng (kể cả bằng trắc nghiệm) |
+| `luon-bat.md` | Khối quy tắc ngắn để chèn vào `~/.claude/CLAUDE.md`, cho mọi bài viết tiếng Việt tự theo giọng tự nhiên |
+| `scripts/cai-luon-bat.ps1`, `scripts/cai-luon-bat.sh` | Cài, gỡ khối luôn bật |
 | `references/bang-tu-kiem.md` | Bước tự kiểm trước khi viết bản cuối |
 | `references/khai-thac-chi-tiet.md` | Bài trống rỗng, hoặc chế độ Viết mới |
 | `scripts/quet-dau-vet.py` | Quét dấu vết về chữ |

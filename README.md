@@ -18,13 +18,15 @@ Văn bị coi là "giống AI" vì nó chung chung, đều đều và đầy khu
 
 1. **Bỏ khuôn:** 51 mẫu dấu vết, từ "không chỉ... mà còn", "đóng vai trò then chốt" tới văn dịch và "việc, sự, một cách" dày đặc.
 2. **Thêm điều chỉ người viết có:** skill hỏi học viên ví dụ từ công việc của mình, con số tự đo, chuyện xảy ra khi nào, ở đâu (`references/khai-thac-chi-tiet.md`). Đây là cách hiệu quả nhất, vì AI không tự có những chi tiết này.
-3. **Viết theo giọng của chính người viết:** đưa 150 chữ văn tự viết trở lên, skill lập hồ sơ giọng (độ dài câu, cách xưng hô, từ nối hay dùng) rồi sửa theo đó.
+3. **Viết theo giọng của chính người viết:** chưa có gì thì skill dùng giọng mặc định (người Việt viết tự nhiên, không làm màu). Muốn giống mình hơn thì lập hồ sơ giọng một lần, từ văn tự viết hoặc 6 câu trắc nghiệm; hồ sơ lưu ở `~/.claude/ho-so-giong-van.md` và được dùng lại ở mọi thư mục.
 
 Skill **không** dùng mẹo lừa máy dò: không cài lỗi chính tả, không ký tự ẩn, không ký tự giả chữ Việt, không dịch vòng, không thay từ đồng nghĩa hàng loạt. Các mẹo này làm bài tệ đi và dễ bị phát hiện. Không công cụ nào đảm bảo bài qua được máy dò AI; skill cũng không hứa điều đó.
 
 Bài nộp có chấm điểm, bài báo, luận văn: nhiều nơi yêu cầu khai báo việc dùng AI (ví dụ COPE, ICMJE). Skill nhắc một dòng khi gặp loại văn bản này.
 
 ## Cài đặt
+
+**Bước 1. Cài skill.**
 
 Windows (PowerShell):
 ```powershell
@@ -36,7 +38,25 @@ macOS, Linux:
 git clone https://github.com/andyluu98/vn-humanize ~/.claude/skills/vn-humanize
 ```
 
-Cập nhật: chạy `git pull` trong thư mục trên. Chỉ dùng cho một dự án: clone vào `.claude/skills/vn-humanize` trong thư mục dự án.
+Chỉ cài bước 1 thì skill chạy khi bạn nhờ "humanize", "viết lại cho bớt giọng AI", "soát giọng AI"... Viết email, bài đăng bình thường thì skill không tự chạy.
+
+**Bước 2 (nên làm). Bật cho mọi bài viết.** Chèn một khối quy tắc ngắn vào `~/.claude/CLAUDE.md`, để mọi văn bản tiếng Việt Claude viết đều theo giọng tự nhiên, kể cả khi không gọi skill:
+
+Windows:
+```powershell
+powershell -ExecutionPolicy Bypass -File "$HOME\.claude\skills\vn-humanize\scripts\cai-luon-bat.ps1"
+```
+
+macOS, Linux:
+```bash
+bash ~/.claude/skills/vn-humanize/scripts/cai-luon-bat.sh
+```
+
+Script sao lưu `CLAUDE.md` cũ vào `~/.claude/_backup/`, chạy lại không chèn trùng. Gỡ: thêm `-Go` (Windows) hoặc `--go` (macOS, Linux). Mở phiên Claude Code mới để có hiệu lực. Đánh đổi: khối này nằm trong mọi phiên nên tốn thêm một ít token mỗi lượt; nội dung khối xem ở `luon-bat.md`.
+
+**Bước 3 (tùy chọn). Tạo hồ sơ giọng.** Gõ `/vn-humanize tạo hồ sơ giọng`. Có văn tự viết thì dán vào; không có thì trả lời 6 câu trắc nghiệm. Làm một lần, dùng mãi.
+
+Cập nhật: chạy `git pull` trong thư mục skill, rồi chạy lại script ở bước 2 nếu đã cài. Chỉ dùng cho một dự án: clone vào `.claude/skills/vn-humanize` trong thư mục dự án.
 
 ## Cách dùng
 
@@ -46,19 +66,23 @@ Cập nhật: chạy `git pull` trong thư mục trên. Chỉ dùng cho một d�
 [dán bài cần sửa]
 ```
 
-**Sửa theo giọng của mình (nên dùng):**
+Không cần đưa văn mẫu. Chưa có hồ sơ giọng thì skill dùng giọng mặc định; đã có thì tự đọc hồ sơ.
+
+**Sửa theo một đoạn văn mẫu (tùy chọn, dùng một lần):**
 ```text
 /vn-humanize
 Đây là đoạn mình tự viết trước đây, làm mẫu giọng văn:
-[dán 150 chữ trở lên văn tự viết]
+[dán văn tự viết, càng dài càng giống]
 
 Sửa bài dưới đây theo đúng giọng đó:
 [dán bài cần sửa]
 ```
 
+**Tạo hồ sơ giọng dùng mãi:** "/vn-humanize tạo hồ sơ giọng".
+
 **Chỉ soát, tự sửa:** "/vn-humanize soát bài này". Skill trả bảng gồm câu trích, số mẫu và gợi ý; không chấm điểm, không đoán ai viết.
 
-**Viết mới:** "/vn-humanize viết bài đăng Facebook về buổi học hôm nay". Skill hỏi chi tiết thật trước rồi mới viết.
+**Viết mới:** "/vn-humanize viết bài đăng Facebook về buổi học hôm nay". Skill viết luôn, cuối bài gợi ý chi tiết thật nên thêm. Muốn được hỏi trước thì thêm "hỏi mình trước".
 
 **Học cách tự sửa:** thêm "giải thích từng chỗ sửa theo số mẫu".
 
@@ -79,7 +103,10 @@ python scripts/kiem-tra-so-lieu.py ban-goc.txt ban-sua.txt   # số, tên bị t
 |---|---|
 | `SKILL.md` | 9 nguyên tắc, 3 chế độ, quy trình, giọng theo thể loại, nhịp câu |
 | `references/cac-mau-dau-vet-ai.md` | 51 mẫu dấu vết có ví dụ trước và sau; dấu hiệu người viết thật cần giữ; những điều không phải dấu hiệu AI |
-| `references/giong-van.md` | Cách lập hồ sơ giọng văn từ văn mẫu |
+| `references/giong-mac-dinh.md` | Giọng dùng ngay khi chưa có văn mẫu, chưa có hồ sơ |
+| `references/giong-van.md` | Cách lập hồ sơ giọng văn từ văn mẫu hoặc trắc nghiệm, nơi lưu hồ sơ dùng chung |
+| `luon-bat.md` | Khối quy tắc ngắn chèn vào `~/.claude/CLAUDE.md` |
+| `scripts/cai-luon-bat.ps1`, `scripts/cai-luon-bat.sh` | Cài, cập nhật, gỡ khối luôn bật |
 | `references/bang-tu-kiem.md` | Bảng tự kiểm đạt hoặc không đạt, lặp tới khi qua hết |
 | `references/khai-thac-chi-tiet.md` | Câu hỏi lấy chi tiết thật từ người viết, theo thể loại |
 | `references/nguyen-tac-bo-sung.md` | Nguyên tắc riêng thêm dần từ bài thật của học viên; ưu tiên hơn mẫu chung |
